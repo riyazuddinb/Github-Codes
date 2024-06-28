@@ -37,6 +37,10 @@ git branch  -------->  List the available branch and tells which is the current 
 
 git branch " Branch name"  --------> creates a new branch from the current branch
 
+git branch -r "Branch name"  -------->  Renames the current branch. (Should be used while on the branch that needs to be renamed)
+
+git branch -D "Branch name"  ----------> Deletes the branch (Should be used from main branch only) 
+
 git switch "Branch name"  -------> Switches to the mentioned branch
 
 git switch -c "Branch name"  --------> creates a branch and then switches to that new branch
