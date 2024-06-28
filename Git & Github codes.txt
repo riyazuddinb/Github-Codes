@@ -1,0 +1,115 @@
+Git Commands
+
+01 June 2024
+12:16
+
+Configuration:
+
+git config --user.name   ---------to check any name configured
+git config --user.email   ---------to check any email configured
+
+git config --global user.name "     "      ---------to configure user name
+git config --global user.email "     "      ---------to configure email
+
+git init  ----->  Creates a new Repository
+git status   -------> Gives the status of the repository
+
+STAGING:
+
+git add  --------> groups the changes and sends to the staging area where it is ready for commit
+
+git add . -------->  add all the changes to the staging area.
+
+COMMITING:
+
+git commit  -m   --------->  Commits the change with a message.
+
+git commit -a -m   --------> Stage all changes and commits with a message.
+
+git log   --------> Shows the history of commits.
+git log --oneline  --------> Shows short git log
+
+git -amend   ------>  make changes to the recent commit.
+
+BRANCHING:
+
+git branch  -------->  List the available branch and tells which is the current branch we are in.
+
+git branch " Branch name"  --------> creates a new branch from the current branch
+
+git switch "Branch name"  -------> Switches to the mentioned branch
+
+git switch -c "Branch name"  --------> creates a branch and then switches to that new branch
+
+git branch -D "Branch name"  --------->  Deletes the branch (Should be used from main branch)
+
+git branch -r  ----------> Renames the branch (Works on the particular branch that needs to be renamed)
+
+STASHING:
+
+Stashing is used when we want to switch to other branch without carrying the unstagged changes.
+
+git stash ------>  stash the unstaged changes and moves to the other branch
+
+git stash pop  ------>  unstash the stash content on the current branch and emptys the stash
+
+git stash apply ------> apply the changes on the switched branch after stashing 
+
+git stash list --------> list the stashed changes
+
+git stash apply stash@{1/2/3} -------> applies the selected stashed changes to the current branch
+
+git stash drop stash@{1/2/3}  ----------> drops that particular change
+
+git stash clear  ------> clears all the list of stashed changes
+
+Switching between commits:
+
+git checkout "HASH ID" or git checkout HEAD ~1/2/3	Takes to the particular commit and do changes or create a branch over there.
+
+This will detach the HEAD. Git switch to reattach the HEAD
+
+git switch "HASH ID" 	 Takes you back to the particular commit after using the "git checkout "HASH ID" or git checkout HEAD ~1/2/3"
+
+git switch - 	Takes you back to the last previous branch
+
+Undoing Changes:
+.
+git restore "File name"	Undo the changes in the file after saving it but not after staging or committing
+
+git restore --source HEAD~1/2/3 "File name"	Restore the selected version of the file 1 or 2 or 3 commits prior.
+
+To undo this change use [git restore "File name"] command again.
+
+git restore --staged "File name1" , "File name2"  	Unstages the file before committing.
+
+git reset "HASH ID" or HEAD~1/2/3  	Removes all the commits till the mentioned HASH ID but keeps the changes in the file which can be used to commit on a new branch   
+                                                                                  
+
+git reset --hard "HASH ID" or HEAD~1/2/3   	Removes all the commits till the mentioned HASH ID and the changes will also be deleted like it was never existed before.                
+                 
+git revert "HASH ID" or HEAD~1/2/3   	If we mistakenly committed a file and want to undo the changes without deleting the commits then use git revert. 
+	 Git revert should be used always when collaborating 
+                                                                           
+
+Git HUB:
+
+git remote -v  -------> To check any remote exists
+
+git remote -r  --------> To check origin/master pointer
+
+git remote add "origin" / any name "Repo URL"  --------> Establish a connection to the github  repo
+
+git push origin <branch name>  ------> push the branch to the github repo
+
+git push origin <branch name: another branch name>   --------> push the current branch to the mentioned branch
+
+git fetch origin  -------> Fetches all the updates from all branches to local 
+
+git fetch origin/ "Branch name"  ---------->  Fetches all the changes into local repo but doesn’t integrate to the local                       branch.
+
+git checkout origin/ "Branch name"  ---------> Used to check what was the change from github
+
+git pull origin "Branch name"   ----------> Fetches all the changes from github and merges into current branch.
+
+When pushing the latest commit to the github repo always check is there any new update in Github using git fetch origin
