@@ -1,0 +1,40 @@
+UNIX Commands
+
+01 June 2024
+12:18
+
+ls   --------->  list--->  lists the contents in a location like folder or file.
+cd  ---------  change directory ---->  moves to another location
+
+start . ~   -------> opens Home in  file explorer
+start . "  "  ------> opens
+
+ls . "Folder / File Name"   ------>  lists the contents in a location like folder or file.
+
+ls .  Folder / File Name ---------> To navigate inside a folder and see a file
+
+ ls  "Folder" / "Folder"   ---------> Shows the folder inside a folder
+
+open .  "Folder / File Name"   ------>  opens the contents inside a location like folder or    file.(MAC)
+
+clear  ------>  clears the gitbash terminal
+pwd -  Print Working Directory ----- Shows current location.
+
+cd  ---------  change directory ---->  moves to another location
+cd ..    ------- >    Takes you one step backwards
+cd ../../   --------> Takes you two step backwards
+
+touch    file name.extention  ------> Creates a new file
+
+ touch    path/path/file name.extention -------> Creates new file on a specified path
+ eg:  touch "Vs Code"/"Python"/"Cyber.pdf"
+
+mkdir  -------->  Creates a folder
+
+eg:  mkdir  folder name
+
+        mkdir   folder name folder name
+
+rm  --------> removes files
+
+rm -rf  -----------> Deletes an entire folder
