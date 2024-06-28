@@ -100,7 +100,7 @@ Git HUB:
 
 git remote -v  -------> To check any remote exists
 
-git remote -r  --------> To check origin/master pointer
+git branch -r  --------> To check origin/master pointer
 
 git remote add "origin" / any name "Repo URL"  --------> Establish a connection to the github  repo
 
