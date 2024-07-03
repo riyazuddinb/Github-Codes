@@ -110,10 +110,10 @@ git push origin <branch name: another branch name>   --------> push the current 
 
 git fetch origin  -------> Fetches all the updates from all branches to local 
 
-git fetch origin/ "Branch name"  ---------->  Fetches all the changes into local repo but doesn’t integrate to the local                       branch.
+git fetch origin/ <Branch name>  ---------->  Fetches all the changes into local repo but doesn’t integrate to the local                       branch.
 
-git checkout origin/ "Branch name"  ---------> Used to check what was the change from github
+git checkout origin/ <Branch name>  ---------> Used to check what was the change from github
 
-git pull origin "Branch name"   ----------> Fetches all the changes from github and merges into current branch.
+git pull origin <Branch name>   ----------> Fetches all the changes from github and merges into current branch.
 
 When pushing the latest commit to the github repo always check is there any new update in Github using git fetch origin
